@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Get latest oh-my-zsh
+# Get the latest oh-my-zsh
+git submodule add https://github.com/ohmyzsh/ohmyzsh home/oh-my-zsh
+
 git submodule init
 git submodule update
 
