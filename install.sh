@@ -16,6 +16,10 @@ do
   source="$root/home/$file"
   target="$HOME/.$file"
 
-  echo "Copying $source => $target"
-  cp -r $source $target
+  if [ ! -e $target ]; then
+    echo "Copying $source => $target"
+    cp -r $source $target
+  else
+    echo "Skipping $target as it already exists"
+  fi
 done
