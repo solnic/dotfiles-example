@@ -5,7 +5,7 @@ if [ ! -d home/oh-my-zsh ]; then
   git submodule add https://github.com/ohmyzsh/ohmyzsh home/oh-my-zsh
 fi
 
-# Get latest oh-my-zsh
+# Get the latest oh-my-zsh
 git submodule init
 git submodule update --recursive --remote
 
