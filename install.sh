@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Get the latest oh-my-zsh
+# Add oh-my-zsh as a submodule if it's not there yet
 if [ ! -d home/oh-my-zsh ]; then
   git submodule add https://github.com/ohmyzsh/ohmyzsh home/oh-my-zsh
 fi
 
+# Get latest oh-my-zsh
 git submodule init
-git submodule update
+git submodule update --recursive --remote
 
 root="$(pwd)"
 
